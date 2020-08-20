@@ -1,12 +1,15 @@
 const path = require('path')
 
 module.exports = {
-    entry: './src/app.ts',
+    entry: './src/app.tsx',
     mode: 'development',
     devtool: 'source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
+    },
+    resolve: {
+        extensions: [ '.js', '.ts', 'tsx', '.json' ]
     },
     module: {
         rules: [{
